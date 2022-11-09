@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#nav{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(129, 65, 189);
+    padding: 5px 50px;
+    color: white;
+}
+#nav>.left-nav>a>img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.left-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: 50px;
+}
+.middle-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    font-size: 20px;
+}
+.middle-nav>a{
+    text-decoration: none;
+    color: white;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+#loginImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#cartImg{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.right-nav>h3{
+    border: 2px solid white;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+.right-nav>#location{
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(129, 65, 189);
+    color: white;
+    border: none;
+}

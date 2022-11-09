@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>care page</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        .nav2{
+            width: 100%;
+            height: 50px;
+            background-color: rgb(101, 99, 99);
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+        }
+        .nav2>button{
+            font-size: 18px;
+            padding: 8px 20px;
+            background-color: rgb(41, 41, 41);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .slider-box{
+            width: 80%;
+            height: 50vh;
+            margin: 50px auto;
+            background-color: rgb(11, 8, 26);
+            overflow: hidden;
+        }
+        .topImg>img{
+            width: 100%;
+        }
+        .bottomImg{
+            width: 100%;
+            display: inline-flex;
+            transition: 1s;
+        }
+        .bottomImg>img{
+            width: 100%;
+            margin-top: -4px;
+        }
+        .indicator{
+            position: absolute;
+            left: 42%;
+            transform: translateX(50%);
+        }
+        .indicator span{
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: rgb(203, 202, 202);
+            cursor: pointer;
+            align-items: center;
+        }
+        .indicator span:hover{
+            height:5px ;
+        }
+        .active{
+            background: rgb(223, 9, 9) !important;
+        }
+        .lab-test{
+            width: 80%;
+            margin: auto;
+        }
+        .lab-test>p{
+            margin-top: -15px;
+            color: grey;
+        }
+        #cards{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: auto;
+            gap: 25px;
+        }
+        #cards>div{
+            background-color: rgb(249, 249, 246);
+            transition: 0.3s;
+        }
+        #cards>div:hover{
+            cursor: pointer;
+            transform:scale(0.98);
+            z-index: 1;
+        }
+        #cards>div>img{
+            width: 100%;
+            border-radius: 5px;
+            
+        }
+        #cards>div>div>div:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+        }
+        #cards>div>div>div:nth-child(1)>p:nth-child(2){
+            text-decoration: line-through;
+            color: grey;
+        }
+        #cards>div>div>div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+            margin-top: -20px;
+        }
+        #cards>div>div>div:nth-child(2)>p:nth-child(2){
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="left-nav">
+            <a href="index.html">
+                <img src="BeFit logo.png" alt="">
+            </a>
+            
+            <h1>Be Fit</h1>
+        </div>
+        <div class="middle-nav">
+            <a href="#">FITNESS</a>
+            <a href="care.html">CARE</a>
+            <a href="#">MIND</a>
+            <a href="#">STORE</a>
+        </div>
+        <div class="right-nav">
+            <select name="" id="location">
+                <option value="">Bangalore</option>
+                <option value="">Delhi NCR</option>
+                <option value="">Hyderabad</option>
+                <option value="">Mumbai</option>
+            </select>
+            <h3>GET APP</h3>
+            <img id="loginImg" src="https://static.cure.fit/assets/images/user-default.png" alt="">
+            <img id="cartImg" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/cart-dark-theme.svg" alt="">
+        </div>
+    </div>
+    <div class="nav2">
+        <button>Lab Tests</button>
+    </div>
+    <div class="slider-box">
+        <div class="topImg">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440/dpr_2/image/vm/aa3e1923-35c9-474a-9725-b805692a668b.png" alt="">
+        </div>
+        <div class="bottomImg">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440/dpr_2/image/vm/56ddb91c-6286-490e-99c6-c73dda380f3a.png" alt="">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440/dpr_2/image/vm/f061fddb-e946-4348-91e4-ffe9d69dd18a.png" alt="">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/fl_progressive,f_auto,q_auto:eco,w_1440/dpr_2/image/vm/cb1c1e2e-4b01-4920-a67d-46dd89857ced.png" alt="">
+        </div>
+        <div class="indicator">
+            <span id="btn1" class="active"></span>
+            <span id="btn2"></span>
+            <span id="btn3"></span>
+        </div>
+
+    </div>
+    <div class="lab-test">
+        <h1>Lab Tests</h1>
+        <p>Assess and monitor your health from the comfort of your home now.</p>
+        <div id="cards">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let slide = document.querySelector(".bottomImg");
+    let btn1 = document.querySelector("#btn1");
+    let btn2 = document.querySelector("#btn2");
+    let btn3 = document.querySelector("#btn3");
+
+    let x = 0;
+    let imgShow = function(){
+        x=x+100;
+        if(x==300){
+            x=-100;
+        }
+        if(x==0){
+            slide.style.transform = `translateX(-${x}%)`;
+            btn1.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+        }
+        if(x==100){
+            slide.style.transform = `translateX(-${x}%)`;
+            btn2.classList.add("active");
+            btn3.classList.remove("active");
+            btn1.classList.remove("active");
+        }
+        if(x==200){
+            slide.style.transform = `translateX(-${x}%)`;
+            btn3.classList.add("active");
+            btn2.classList.remove("active");
+            btn1.classList.remove("active");
+        }
+    }
+
+    btn1.addEventListener("click",()=>{
+        slide.style.transform = "translateX(0%)";
+        btn1.classList.add("active");
+        btn2.classList.remove("active");
+        btn3.classList.remove("active");
+        x=0;
+    })
+    btn2.addEventListener("click",()=>{
+        slide.style.transform = "translateX(-100%)";
+        btn2.classList.add("active");
+        btn1.classList.remove("active");
+        btn3.classList.remove("active");
+        x=100;
+    })
+    btn3.addEventListener("click",()=>{
+        slide.style.transform = "translateX(-200%)";
+        btn3.classList.add("active");
+        btn1.classList.remove("active");
+        btn2.classList.remove("active");
+        x=200;
+    })
+
+    
+
+    setInterval(imgShow,2000);
+
+    let url = "https://636b844bad62451f9fb3f818.mockapi.io/labTest";
+    fetch(url)
+    .then((res)=> res.json())
+    .then((data)=>{
+        DisplayCards(data);
+    })
+
+
+    function DisplayCards(data){
+        data.forEach((elem,i)=>{
+            let div = document.createElement("div");
+
+            let img = document.createElement("img");
+            img.setAttribute("src",elem.img);
+            
+
+            let priceDiv = document.createElement("div")
+
+            let priceDiv1 = document.createElement("div");
+
+
+            
+            let price = document.createElement("p");
+            price.innerText = "Price";
+
+            let priceValue = document.createElement("p");
+            priceValue.innerText = elem.price;
+
+            priceDiv1.append(price,priceValue);
+
+
+
+            let priceDiv2 = document.createElement("div");
+
+
+            
+            let offerPrice = document.createElement("p");
+            offerPrice.innerText = "Offer Price";
+
+            let offerPriceValue = document.createElement("p");
+            offerPriceValue.innerText = elem.offerPrice;
+
+            priceDiv2.append(offerPrice,offerPriceValue);
+
+            priceDiv.append(priceDiv1,priceDiv2)
+
+        
+
+            div.append(img,priceDiv);
+            document.querySelector("#cards").append(div);
+        })
+        
+
+
+    }
+      
+</script>
