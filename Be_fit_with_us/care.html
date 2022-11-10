@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>care page</title>
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="care-faq.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
+        *{
+            font-family: "roboto",sans-serif;
+        }
         .nav2{
             width: 100%;
             height: 50px;
@@ -22,8 +27,8 @@
             font-size: 18px;
             padding: 8px 20px;
             background-color: rgb(41, 41, 41);
-            color: white;
-            border: none;
+        color: white;
+        border: none;
             border-radius: 5px;
         }
         .slider-box{
@@ -64,57 +69,110 @@
         .active{
             background: rgb(223, 9, 9) !important;
         }
-        .lab-test{
+        .lab-test,.srCitizen{
             width: 80%;
             margin: auto;
         }
-        .lab-test>p{
+        .lab-test>p,.srCitizen>P{
             margin-top: -15px;
             color: grey;
         }
-        #cards{
+        .lab-test>h1,.srCitizen>h1{
+            font-size: 25px;
+        }
+        #cards,
+        #srCards{
             display: grid;
             grid-template-columns: repeat(5,1fr);
             grid-template-rows: auto;
             gap: 25px;
         }
-        #cards>div{
+        #cards>div,
+        #srCards>div{
             background-color: rgb(249, 249, 246);
             transition: 0.3s;
         }
-        #cards>div:hover{
+        #cards>div:hover,
+        #srCards>div:hover{
             cursor: pointer;
             transform:scale(0.98);
             z-index: 1;
         }
-        #cards>div>img{
+        #cards>div>img,
+        #srCards>div>img{
             width: 100%;
             border-radius: 5px;
             
         }
-        #cards>div>div>div:nth-child(1){
+        #cards>div>div>div:nth-child(1),
+        #srCards>div>div>div:nth-child(1){
             display: flex;
             justify-content: space-between;
         }
-        #cards>div>div>div:nth-child(1)>p:nth-child(2){
+        #cards>div>div>div:nth-child(1)>p:nth-child(2),
+        #srCards>div>div>div:nth-child(1)>p:nth-child(2){
             text-decoration: line-through;
             color: grey;
         }
-        #cards>div>div>div:nth-child(2){
+        #cards>div>div>div:nth-child(2),
+        #srCards>div>div>div:nth-child(2){
             display: flex;
             justify-content: space-between;
             margin-top: -20px;
         }
-        #cards>div>div>div:nth-child(2)>p:nth-child(2){
+        #cards>div>div>div:nth-child(2)>p:nth-child(2),
+        #srCards>div>div>div:nth-child(2)>p:nth-child(2){
             font-weight: bold;
         }
+        #FstHr{
+            width: 80%;
+            margin: auto;
+        }
+        .links{
+            width: 80%;
+            margin: auto;
+        }
+        .links>a{
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 10px;
+            color: black;
+        }
+
+        #link_bottom_hr{
+            margin-bottom: 55px;
+        }
+        
+        .bestDoctor{
+            margin: 50px 0px;
+            font-size: 30px;
+        }
+        .bestDoctor h1{
+            margin: 0px;
+            padding: 0px;
+            color: rgb(48, 48, 48);
+            
+        }
+        .bestDoctor h1:nth-child(2){
+            font-size: 49px;
+            color: rgb(157, 155, 155);
+            margin-top: 20px;
+            
+        }
+        .bestDoctor h1:nth-child(3){
+            font-size: 33px;
+            color: rgb(157, 155, 155);
+            margin-top: 10px;
+            
+        }
+        
     </style>
 </head>
 <body>
     <div id="nav">
         <div class="left-nav">
             <a href="index.html">
-                <img src="BeFit logo.png" alt="">
+                <img src="BeFit logo.png" alt="befit logo" title="Go to Home Page">
             </a>
             
             <h1>Be Fit</h1>
@@ -163,6 +221,325 @@
 
         </div>
     </div>
+    <hr id="FstHr">
+    <div class="srCitizen">
+        <h1>Tests for Senior Citizen</h1>
+        <div id="srCards">
+
+        </div>
+    </div>
+    <div class="links">
+        <h2>Quick Links</h2>
+        <a href=""><h1>Help & Support</h1></a>
+        <hr>
+        <a href="termsAndConditions.html" target="_blank"><h1>Terms and Conditions</h1></a>
+        <hr id="link_bottom_hr">
+    </div>
+
+    <!-- FAQS section -->
+
+    <div class="faqs">
+        <h1>FAQS</h1>
+        <h2>7 Questions</h2>
+
+        <!-- question 1 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>How does home sample collection work?</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        Once you have chosen a convenient time slot for your booking, and placed an order, our WHO certified health professionals will arrive at your chosen address and collect blood and/or urine samples.  Once samples are collected, they will be processed at one of our partner labs closest to you and the test report will be available on your app and email.
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>Can I reschedule/cancel my diagnostic test appointment?</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        The appointment can be rescheduled or cancelled 2 hours before your chosen slot.  
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>How can I receive my reports on email again ?</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        You can email your test reports by going to Profile> Activity &Records> Medical Records> Diagnostic Tests and selecting the email reports button.   
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>I did not get my reports on email</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        Sometimes, mail providers mistakenly mark the reports email as Spam. Please check the spam folder (or) trigger the reports email again on the app   You would have received an SMS after your sample collection indicating the time it would take for results to be available  In case the communicated time has elapsed and you have not received your report on email, please reach out to us at hello@cure.fit   
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>What instructions should I follow for my tests?</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        All instructions that have to be followed for your tests will be communicated to you at the time of booking a slot. You will also receive an email covering the instructions.  
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>How can I get a refund for my Full body Health Check /Diagnostic Screening pack ?</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        Only if you have not completed your Full Body health check up/ Diagnostic Screening within 1 year from the purchase date, please write to hello@Befit.com  e.g: If heath check is purchased on 1/10/2019, you can write to us till 1/10/2020. We do not refund any amount for health check ups with a purchase date older than a year.  
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question-container">
+            <div class="content-container">
+                <div class="faq-header">
+                    <h3>Can I club two or more sample collection slots</h3>
+                    <span class="open activeHead">&#8744</span>
+                    <span class="close">&#8743</span>
+                </div>
+
+                <div class="content">
+                    <p>
+                        We are currently working on enabling multiple orders from the same address (for the same person or different).  Till then, you can request the phlebotomist who comes for the sample collection for the first order, to add on the rest of the tests (for the same person or different).  You can directly pay him via card / UPI / cash for the additional tests purchased.   
+                    </p>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="bestDoctor">
+        <h1>THE BEST</h1>
+        <h1>DOCTOR GIVES</h1>
+        <h1>THE LEAST MEDICINE</h1>
+    </div>
+
+    <!-- footer section -->
+
+    <!-- footer top -->
+
+    <div class="footer-top">
+
+        <!-- top footer left -->
+        <div>
+            <h4>Lab tests At home</h4>
+            <p>Lab tests are essential not just to help the doctor detect a condition or a disease, but are also important to plan the treatment, monitor its efficacy, and switch it if it is not helping you the way it should. They may be advised by the doctor to detect certain specific conditions or as a part of a routine checkup. Until a few years ago, getting lab tests to check the samples of our blood, tissue, or urine to get a diagnosis of diseases or other conditions used to be done at hospitals or clinics. This used to have its own share of stress, costs, and other concerns. However, due to several innovations in diagnostic healthcare, things like telemedicine and home diagnostic tests are a reality. Home testing services have been possible due to the advancements in laboratory technology, growth and penetration of the internet, the birth of inventive health-tech startups, and the fact that people are becoming more cognizant of their health and ordering these tests and health checkup at home. Not only are these lab tests at home simple, systematic, have a quick turnaround time, but also 100 percent accurate. Depending on the service that you choose, home diagnostic tests can be done at ourselves at home or by experienced phlebotomists who come to collect the samples at home.</p>
+
+            <h4>How does at-home lab test work?</h4>
+            <p>Home lab tests are a swift and easy way to take control of your health. This is how they work: Keeping in mind the test advised by your doctor, select ‘lab test near me’, make the payment, and schedule the appointment. On the scheduled day and time, a phlebotomist will visit your location to collect your samples. After the completion of your lab test, your reports will be reviewed by experienced and independent physicians or by doctors in our panel of hospitals. Your reports with the diagnosis will be available on the app and will be emailed to you within 24 hours of the sample collection.</p>
+
+            <h4>What types of diagnostic tests are available?</h4>
+            <p>At Be.fit, we offer close to 20 diagnostic tests that cover every aspect of your health. These tests include pathology tests, which involve the collection of blood and urine samples and screening tests. These medical tests at home include: Full body checkup: To understand your key health indicators and to diagnose lifestyle and chronic diseases like thyroid, diabetes, obesity, etc. It also evaluates conditions related to the liver, kidneys, heart, blood, etc. Vitamin Test lab test: To check for deficiencies of Vitamin B12 and D levels in your body. Women’s health pack : This includes lab tests for issues specific to women like PCOS, menstrual irregularities, thyroid, anaemia, etc. Hair fall screening: To identify nutritional deficiencies and hormonal imbalances that are causing hair-related conditions in both men and women. Immunity screening: To evaluate your vital health parameters that have a bearing on your immunity and the body’s natural defense system to diseases, and to assess your infection susceptibility. Fever panel test: This pack screens for conditions like dengue, typhoid, malaria, and other causes of fever. This is mainly for people who are experiencing fever symptoms for 2 days or more. Thyroid screening: This test is for those who have been detected with thyroid or show symptoms of thyroid dysfunction. It is helpful in assessing and monitoring this condition. Diabetes screening: This test is recommended for people who are pre-diabetic, have heart diseases, or are obese. It is helpful in monitoring the glucose levels in the blood. Bone health screening: This test measures conditions related to your bones and is helpful for people who experience bone pain, stiffness, immobility, etc. Lipid screening: To assess your susceptibility to cardiac diseases and increased cholesterol levels. This test is recommended for people who are obese, suffer from high levels of stress, diabetics, eat a rich diet, smoke, or have a family history of strokes or heart diseases. Haemogram with CBC: This test is done to assess the levels of your red blood cells, white blood cells, and platelets count. It helps in diagnosing conditions like excessive bleeding, blood clotting disorders, anaemia, infections, etc. Pregnancy test: This is a blood test that is done to confirm if you are pregnant. Obesity risk profile lab test: This test is done to evaluate and assess conditions that are associated with obesity. This is recommended for people who experience fluctuations in their weight, have metabolic issues, and high BMI. Kidney function test: This test is done to evaluate the functioning of your kidneys and is recommended for people who have high blood pressure, diabetes, heart diseases, or a family history of kidney diseases. Liver function test: This test is done for people who show symptoms of damage to their liver. It is helpful for people who suffer issues like dark urine, swelling of stomach, sallow eyes and skin, fatigue, constant nausea, etc. Iron screening test: This test helps evaluate the levels of iron metabolism in your body. It is especially recommended for people who experience shortness of breath, weight & hair loss, fatigue, etc. Alcohol risk assessment test: This test is designed for people who have had a long-term dependence on alcohol. It assesses the functioning and status of your liver and pancreas and evaluates the damage caused by the consumption of alcohol.</p>
+
+            <h4>How to Book a Lab test Online?</h4>
+            <p>Getting a diagnostic test at home has never been easier. You just need to follow these steps for getting the lab test at home done: Register yourself on the Cult.fit website or the mobile application in simple and easy steps. Buy the screening pack on either the website or the mobile application. Search for ‘lab test near me’ to choose the lab of your choice and the test that needs to be done. Schedule the lab test at home at a time and day convenient to you after you make the payment for the test pack. Once you make the payment, you will receive a confirmation from us about your lab test at home. You will be visited by a phlebotomist who will collect your samples from home. After the completion of the test, you will receive your report within 24 hours.</p>
+
+        </div>
+
+        <!-- top footer right -->
+        <div>
+            <h4>What are the Benefits of At-home lab tests</h4>
+            <p>Looking at the kind of popularity that diagnostic tests and health check-up at home have gained, there are obvious advantages that one gains. Some of the most important benefits of medical tests at home include: One of the biggest advantages of booking lab tests online with cult.fit is our partnership with ‘Healthians’, which is a NABL Certified Lab that provides reliable and high-quality diagnostic results.  Diagnostic tests and health checkup at home saves a lot of time that you would have otherwise spent traveling and in waiting rooms.  A great advantage of booking lab tests online is that you can schedule them at your convenience. You can take care of your health needs while being completely flexible.  Cult.fit guarantees to meet your schedule as per your convenience. Our technicians who collect the samples are punctual and professional. Once you have purchased your diagnostic test sample pack, you do not need to pay any extra fees for your sample collection. We offer free home sample pickup. You can book more than one lab test at home when opting for lab tests. We have packages that comprise specific tests for a comprehensive diagnosis. This does away with your need to search multiple options for lab tests near me.  All our sample collection teams i.e. phlebotomists are not only technically trained but are also proficient with security and quality protocols to let you have an anxiety-free test experience.  All our technical teams who visit your home are WHO certified and trained on NABL guidelines on sanitization techniques and wear personal protective equipment at all times.  You get your reports within a day of your test. The reports that you get are comprehensive and easy to understand. Your search for a lab test at home near me ends with Cult.fit. We are a comprehensive healthcare provider and take care of all your medical needs including online doctor consultations, health check-up at home, lab tests online, therapy sessions at home, etc.  Since they are conducted at home, these tests are easy and swift.  Since you do not need to travel to diagnostic centres, clinics, or hospitals, you save the cost of travel, parking, and don’t have to be off work.  When you get a health checkup at home, you don’t have to be concerned about the risk of infections that you may encounter at a clinic or hospital that are full of people.  Getting diagnostic tests at home are especially beneficial for people who cannot travel. People who have limited immunity and compromised immunity benefit the most from getting tests done at home. </p><br>
+
+            <h4>Where will I get my lab test reports?</h4>
+            <p>Within 24 hours of the completion of your test, you will receive your digital diagnostic test reports within 24 hours. You can access these reports on your Cult.fit app and your email.</p>
+
+            <h4>Top Searches</h4>
+            <h4>Online Fitness Classes</h4>
+            <p>Cardio Exercises | Lean Muscle | Lean Body | Weight Loss Exercises | Six Pack Abs | HIIT Workout for Beginners | Exercise for Belly Fat | HRX Workout | Handstand Push Up | Online Fitness Trainer | How To Increase Stamina | Online Yoga Classes | Split Exercise | Workout For Beginners | Dumbbell Exercises | Pilates Workout | Walking Exercise | Pistol Squats | Oblique Exercises | Gym Near Me</p>
+
+            <h4>Mindfulness</h4>
+            <p>Yoga Asanas | Yoga For Weight Loss | Kids Yoga | Surya Namaskar | Online Yoga Classes | Yoga For Beginners | Yoga Nidra | Music Meditation | Pranayam | Bedtime Stories | Bedtime Stories For Kids | Mindfulness Meditation | Meditation in Hindi | Sleep Meditation | Meditation</p>
+
+            <h4>Online Doctor Consultation & Diagnostic Tests</h4>
+            <p>Dentist Near Me | Gynaecologist Near Me | Dermatologist Near Me | Endocrinologist Near Me | Pulmonologist Near Me | Cardiologist Near Me | Orthopedist Doctor Near Me | Thyroid Test | Pregnancy Test | Full Body Checkup | Kidney Function Test | Therapist Near Me | Online Counselling | Physiotherapist Near Me</p>
+
+            <h4>Healthy Recipes</h4>
+            <p>Sambar Recipe | Masala For Dosa | Kadai Paneer Recipe | Mattar Paneer Recipe | Manchow Soup | Egg Curry | Chilli Baby Corn | Homemade Protein Powder | Veg Thukpa | Double Ka Meetha</p>
+
+            <h4>Gyms In India</h4>
+            <p>Gyms In Delhi | Gyms In Mumbai | Gyms In Bangalore | Gyms In Pune | Gyms In Chennai | Gyms In Hyderabad | Gyms In Jaipur | Gyms In Kolkata | Gyms In Ahmedabad | Gyms In Chandigarh | Gyms In Indore | Gyms In Coimbatore | Gyms In Surat | Gyms In Ludhiana | Gyms In Vizag | Gyms In Amritsar | Gyms In Mysore | Gyms In Mangalore | Gyms In Kochi | Gyms In Jammu | Gym In Kharghar | Gym In Bandra | Gym In Velachery | Gym In Chembur | Gym In Indiranagar | Gym In HSR Layout</p>
+        </div>
+    </div>
+
+    <!-- footer middle Section -->
+
+    <div class="footer-middle">
+        <div>
+            <div class="logo">
+                <img src="BeFit logo.png" alt="">
+                <h1>Be.Fit</h1>
+            </div>
+            <p>At cult.fit, we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, Medical & lifestyle care hassle-free.#BeBetterEveryDay</p>
+        </div>
+        <div>
+            <h4>be.fit for business</h4>
+            <h4>be.fit for franchise</h4>
+            <h4>corporate partnerships</h4>
+            <h4>cult pass network</h4>
+            <h4>t&c for business</h4>
+        </div>
+        <div>
+            <h4>partner.fit</h4>
+            <h4>blogs</h4>
+            <h4>security</h4>
+            <h4>careers</h4>
+        </div>
+        <div>
+            <h4>contact us</h4>
+            <h4>privacy policy</h4>
+            <h4>cult bmi calculator</h4>
+            <h4>terms & conditions</h4>
+        </div>
+
+        <div>
+            <img src="AppleStore logo.png" alt="">
+            <img src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,w_178,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/download-app/play-store-dark-card-2.png" alt="">
+            <img src="All social media logo.png" alt="">
+        </div>
+    </div>
+
+    <!-- footer bottom section -->
+    <div class="footer-bottom">
+        <div>
+            <p>Related Searches</p>
+            <a href="#"><p>Yoga Asanas</p></a>
+            <a href="#"><p>Pranayam</p></a>
+            <a href="#"><p>Morning Yoga</p></a>
+            <a href="#"><p>Bedtime Stories</p></a>
+            <a href="#"><p>Exercises To Reduce Belly Fat</p></a>
+            <a href="#"><p>Pilates Workouts</p></a>
+            <a href="#"><p>Gyms in Bangalore</p></a>
+            <a href="#"><p>Yoga for Lower Body</p></a>
+            <a href="#"><p>Physical Exercises for Kids</p></a>
+            <a href="#"><p>Public Speaking</p></a>
+            <a href="#"><p>Fitness Glossary</p></a>
+        </div>
+        <div>
+            <a href="#"><p>Yoga For Weight Loss</p></a>
+            <a href="#"><p>Breathing Exercises Yoga</p></a>
+            <a href="#"><p>Balancing Asanas</p></a>
+            <a href="#"><p>Sleep Meditation</p></a>
+            <a href="#"><p>Pilates</p></a>
+            <a href="#"><p>HRX Workout</p></a>
+            <a href="#"><p>Gyms in Delhi</p></a>
+            <a href="#"><p>Yoga for Mind</p></a>
+            <a href="#"><p>How to Get a Toned Body</p></a>
+            <a href="#"><p>How to Control Emotions</p></a>
+        </div>
+        <div>
+            <a href="#"><p>Hatha Yoga</p></a>
+            <a href="#"><p>Lower Back Pain Yoga</p></a>
+            <a href="#"><p>Yoga For Digestion</p></a>
+            <a href="#"><p>Weight Loss Exercises</p></a>
+            <a href="#"><p>Upper Body Workout</p></a>
+            <a href="#"><p>Abs Workout at Home</p></a>
+            <a href="#"><p>Gyms in Pune</p></a>
+            <a href="#"><p>Morning Workout</p></a>
+            <a href="#"><p>Body Flexibility Exercises</p></a>
+            <a href="#"><p>Home Exercises</p></a>
+        </div>
+        <div>
+            <a href="#"><p>Beginners Yoga</p></a>
+            <a href="#"><p>Standing Asanas In Yoga</p></a>
+            <a href="#"><p>Backbend Yoga</p></a>
+            <a href="#"><p>Six Pack</p></a>
+            <a href="#"><p>Beginner HIIT Workout</p></a>
+            <a href="#"><p>Exercise For Kids</p></a>
+            <a href="#"><p>Gyms in Hyderabad</p></a>
+            <a href="#"><p>Calorie Burning Exercises</p></a>
+            <a href="#"><p>Yoga for Sleep</p></a>
+            <a href="#"><p>Dumbbell Exercises</p></a>
+        </div>
+        <div>
+            <a href="#"><p>Kids Yoga</p></a>
+            <a href="#"><p>Yoga Stretching</p></a>
+            <a href="#"><p>Meditation</p></a>
+            <a href="#"><p>Online Gym</p></a>
+            <a href="#"><p>Stretching Exercises</p></a>
+            <a href="#"><p>Lean Muscle</p></a>
+            <a href="#"><p>Gym Near Me</p></a>
+            <a href="#"><p>Yoga for Senior Citizen</p></a>
+            <a href="#"><p>Yoga for Neck Pain</p></a>
+            <a href="#"><p>Inversion Yoga Poses</p></a>
+        </div>
+        <Div>
+            <a href="#"><p>Yoga Nidra</p></a>
+            <a href="#"><p>Sitting Asanas</p></a>
+            <a href="#"><p>Meditation Music</p></a>
+            <a href="#"><p>Cardio Exercises</p></a>
+            <a href="#"><p>Fat Burning Exercise</p></a>
+            <a href="#"><p>Gyms in Mumbai</p></a>
+            <a href="#"><p>Yoga for Upper Body</p></a>
+            <a href="#"><p>Personal Development</p></a>
+            <a href="#"><p>Yoga for Endurance</p></a>
+            <a href="#"><p>Yoga Poses</p></a>
+        </Div>
+    </div>
+    
 </body>
 </html>
 <script>
@@ -237,6 +614,9 @@
 
             let img = document.createElement("img");
             img.setAttribute("src",elem.img);
+            img.addEventListener("click",()=>{
+                window.location.href = elem.innerHTML;
+            })
             
 
             let priceDiv = document.createElement("div")
@@ -249,7 +629,69 @@
             price.innerText = "Price";
 
             let priceValue = document.createElement("p");
-            priceValue.innerText = elem.price;
+            priceValue.innerText = `₹ ${elem.price}`;
+
+            priceDiv1.append(price,priceValue);
+
+
+
+            let priceDiv2 = document.createElement("div");
+
+
+            
+            let offerPrice = document.createElement("p");
+            
+            offerPrice.innerText = "Offer Price";
+
+            let offerPriceValue = document.createElement("p");
+            offerPriceValue.innerText = `₹ ${elem.offerPrice}`;
+
+            priceDiv2.append(offerPrice,offerPriceValue);
+
+            priceDiv.append(priceDiv1,priceDiv2)
+
+        
+
+            div.append(img,priceDiv);
+            document.querySelector("#cards").append(div);
+        })
+
+    }
+
+    // Senior citizens
+
+    let srData =[
+        {
+            img: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_m_mag.png",
+            price: 2990,
+            offerPrice: 1790
+        },
+        {
+            img: "https://cdn-images.cure.fit/www-curefit-com/image/upload/w_232,fl_progressive,f_auto,q_auto:eco/dpr_2/image/carefit/diagnostics/screening-packs/sr_citizen_adv_f_mag.png",
+            price: 2990,
+            offerPrice: 1790
+        }
+    ];
+
+    function DisplaySrCards(srData){
+        srData.forEach((elem,i)=>{
+            let div = document.createElement("div");
+
+            let img = document.createElement("img");
+            img.setAttribute("src",elem.img);
+            
+
+            let priceDiv = document.createElement("div")
+
+            let priceDiv1 = document.createElement("div");
+
+
+            
+            let price = document.createElement("p");
+            price.innerText = "Price";
+
+            let priceValue = document.createElement("p");
+            priceValue.innerText = `₹ ${elem.price}`;
 
             priceDiv1.append(price,priceValue);
 
@@ -263,7 +705,7 @@
             offerPrice.innerText = "Offer Price";
 
             let offerPriceValue = document.createElement("p");
-            offerPriceValue.innerText = elem.offerPrice;
+            offerPriceValue.innerText = `₹ ${elem.offerPrice}`;
 
             priceDiv2.append(offerPrice,offerPriceValue);
 
@@ -272,11 +714,20 @@
         
 
             div.append(img,priceDiv);
-            document.querySelector("#cards").append(div);
+            document.querySelector("#srCards").append(div);
         })
-        
-
-
     }
+    DisplaySrCards(srData);
       
+    //   FAQS section
+
+    let faqHeaders = document.querySelectorAll(".faqs .faq-header");
+
+    faqHeaders.forEach((header,index) =>{
+        header.addEventListener("click",()=>{
+            header.nextElementSibling.classList.toggle("activeHead")
+        });
+    });
+
+
 </script>

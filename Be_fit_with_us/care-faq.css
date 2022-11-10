@@ -1,0 +1,53 @@
+
+.faqs{
+    background-color: rgb(16, 16, 20);
+    color: white;
+    height: auto;
+    padding: 40px 10%;
+    font-family: "roboto",sans-serif;
+
+}
+.faqs h2{
+    margin: 0px;
+    padding: 10px;
+    font-size: 20px;
+    color: grey;
+}
+.faqs .faq-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.faqs .faq-header .open,
+.faqs .faq-header .close{
+    position: absolute;
+    right: 0;
+    padding: 0 32px;
+    font-size: 22px;
+    font-weight: bold;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: all 500ms;
+}
+.faqs .faq-header .open.activeHead,
+.faqs .faq-header .close.activeHead{
+    opacity: 1;
+    transform: translateY(0);
+}
+.faqs .content{
+    padding: 0px;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+
+}
+.faqs .content p{
+    padding-left: 30px;
+    padding-right: 40%;
+
+}
+.faqs .content.activeHead{
+    max-height: 600px;
+}
