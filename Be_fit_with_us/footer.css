@@ -83,6 +83,10 @@
 }
 .footer-bottom>div>a{
     text-decoration: none;
+    font-size: 14px;
+}
+.footer-bottom>div>p{
+    margin-top: -20px;
 }
 .footer-bottom>div>a>p{
     color: rgb(128, 126, 126);
