@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        body{
+            width:100vw;
+            height: 100vh;
+            background: url("https://thumbs.dreamstime.com/b/sport-fitness-lifestyle-people-concept-smiling-men-women-stretching-gym-sport-fitness-lifestyle-people-concept-147152548.jpg");
+            background-size: 100% 100%;
+
+        }
+        .signup{
+            width: 20%;
+            height: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid red;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            background-color: rgb(20, 16, 16);
+            color: white;
+        }
+        .signup>img{
+            width: 100px;
+            height: 100px;
+            margin: 20px 31% 30px;
+            border-radius: 50%;
+        }
+        .signup>label{
+            display: block;
+            width: 100%;
+            font-size: 20px;
+        }
+        .signup>input{
+            display: block;
+            width: 100%;
+            height: 30px;
+            font-size: 20px;
+            margin-bottom:20px ;
+            border-radius: 5px;
+            color: black;
+            
+        }
+        .signup>button{
+            width: 102%;
+            height: 30px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: rgb(134, 134, 181);
+        }
+        .signup>button:hover{
+            cursor: pointer;
+            background-color: rgb(46, 46, 105);
+            font-weight: 600;
+        }
+        .signup>h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="left-nav">
+            <a href="index.html">
+                <img src="BeFit logo.png" alt="">
+            </a>
+            
+            <h1>Be Fit</h1>
+        </div>
+        <div class="middle-nav">
+            <a href="#">FITNESS</a>
+            <a href="care.html">CARE</a>
+            <a href="#">MIND</a>
+            <a href="#">STORE</a>
+        </div>
+        <div class="right-nav">
+            <select name="" id="location">
+                <option value="">Bangalore</option>
+                <option value="">Delhi NCR</option>
+                <option value="">Hyderabad</option>
+                <option value="">Mumbai</option>
+            </select>
+            <h3>GET APP</h3>
+            <a href="login_page.html"><img id="loginImg" src="https://static.cure.fit/assets/images/user-default.png" alt=""></a>
+            <img id="cartImg" src="https://cdn-images.cure.fit/www-curefit-com/image/upload/c_fill,q_auto:eco,dpr_2,f_auto,fl_progressive//image/test/cart-dark-theme.svg" alt="">
+        </div>
+    </div>
+    <div class="signup">
+        <h3>Sign Up</h3>
+        <img src="BeFit logo.png" alt="">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your Name">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email">
+        <label for="password">Enter password</label>
+        <input type="text" id="password" placeholder="Enter your Password">
+        
+        <button>Sign Up</button>
+    </div>
+</body>
+</html>
+<script>
+    let signUpData = JSON.parse(localStorage.getItem("Be_Fit_Members")) || [];
+    let btn = document.querySelector("button");
+    btn.addEventListener("click",()=>{
+        let name = document.querySelector('#name').value;
+        let email = document.querySelector('#email').value;
+        let pass = document.querySelector("#password").value;
+
+        let obj = {name,email,pass};
+        let flag = false;
+
+        signUpData.forEach(element => {
+            if(element.email == email){
+                flag = true;
+            }
+        });
+        if(flag){
+            alert("Already have an account");
+        }else{
+
+            signUpData.push(obj);
+            localStorage.setItem("Be_Fit_Members",JSON.stringify(signUpData));
+    
+            alert("Account created successfully");
+            window.location.href = "login_page.html";
+        }
+
+    })
+</script>
